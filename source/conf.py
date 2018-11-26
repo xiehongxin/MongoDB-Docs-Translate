@@ -23,7 +23,7 @@ from recommonmark.transform import AutoStructify
 
 # -- Project information -----------------------------------------------------
 
-project = 'mongodb中文文档-4.0'
+project = 'mongodb-docs-translate'
 copyright = '2018, hongxin'
 author = 'hongxin'
 
