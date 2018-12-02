@@ -28,7 +28,6 @@ MongoDB的副本集（replica set）其实是一组 mongod 进程，这组进程
 
 ![没有仲裁节点的架构图](http://hdoc.scau.edu.cn/Public/Uploads/2018-11-29/5bff9efce0434.png)
 
-                                    没有仲裁节点的架构图
 
 对于写入请求，只能写入到主节点；读取请求的话，默认也写到主节点，但可以设置从“从节点”读取。
 
@@ -37,7 +36,6 @@ MongoDB的副本集（replica set）其实是一组 mongod 进程，这组进程
 ### 有仲裁节点的情况
 ![有仲裁节点的架构图](http://hdoc.scau.edu.cn/Public/Uploads/2018-11-29/5bff9ef43e900.png)
 
-                                      有仲裁节点的架构图
 
 这是副本集的另一种部署模式，即将其中一个mongod实例设置为仲裁节点。仲裁节点并没有包含数据集，也不参与主节点的选举，它的作用只是通过响应其它副本集成员的心跳（heartbeat）和选举请求来维护副本集中的仲裁（也就是选出新的主节点）。比如当主节点宕机，而从节点数量为偶数时，仲裁者就可以投出关键性的一票。
 
@@ -65,4 +63,4 @@ MongoDB的副本集（replica set）其实是一组 mongod 进程，这组进程
 
 
 ## 其它特点
-https://docs.mongodb.com/manual/replication/
+https://docs.mongodb.com/manual/replication/ 

@@ -1,9 +1,16 @@
 # 认证
 
-###### MongoDB权限认证说明：
-1. MongoDB安装后默认不开权限认证
-2. MongoDB分为管理员数据库（admin）和普通数据库（自己命名，通过use命令）
-3. MongoDB默认没有超级管理员账号，所以要先添加超级管理员账号，再开启权限认证。
+- [认证](#%E8%AE%A4%E8%AF%81)
+	- [MongoDB权限认证说明](#mongodb%E6%9D%83%E9%99%90%E8%AE%A4%E8%AF%81%E8%AF%B4%E6%98%8E)
+
+## MongoDB权限认证说明
+
+1.MongoDB安装后默认不开权限认证
+
+2.MongoDB分为管理员数据库（admin）和普通数据库（自己命名，通过use命令）
+
+3.MongoDB默认没有超级管理员账号，所以要先添加超级管理员账号，再开启权限认证。
+
 ```python
 > use admin 
 > show collections
@@ -15,6 +22,8 @@
    }
 )
 ```
+
+
 4.开启权限认证
 ```python
 4.1.sudo vim /etc/mongod.conf
@@ -26,7 +35,7 @@ security:
 4.3.重启服务：systemctl restart mongod.service
 ```
 
-5. 管理admin数据库的用户只能在admin里面创建；管理其它数据库的用户既可以在admin数据库创建也可以在本身数据库创建。
+5.管理admin数据库的用户只能在admin里面创建；管理其它数据库的用户既可以在admin数据库创建也可以在本身数据库创建。
 
 在admin创建的管理stu_manage的用户
  ```python
@@ -71,12 +80,12 @@ Successfully added user: {
 比较：
 1.账户密码及角色可一致（红色划线），类似python的包名
 2.可通过 show users 查看用户有哪个数据库创建
-3. admin创建的，需在admin进行验证后，再切换到stu_manage才能进行操作；stu_manage创建的,直接在 stu_manage 验证后即可操作.
+3.admin创建的，需在admin进行验证后，再切换到stu_manage才能进行操作；stu_manage创建的,直接在 stu_manage 验证后即可操作.
 
-##### 基本使用（命令行）：
+## 基本使用-命令行
 https://www.jianshu.com/p/a4e94bb8a052
 
-##### 基本使用（Python）：
+## 基本使用-Python
 Python操作我用的是Pycharm，Pycharm里面有个查看数据的插件，叫 "Mongo Explorer", 个人用起来还可以。
 
 新建连接（只标出重点）：
