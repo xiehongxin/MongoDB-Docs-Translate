@@ -1,0 +1,58 @@
+{
+    "variables": {
+        "contact": "xie_hongxin@163.com"
+    },
+    "plugins": [
+         "splitter",
+         "tbfed-pagefooter",
+         "donate",
+         "expandable-chapters-small",
+         "sectionx",
+         "github-buttons",
+         "anchors",
+         "todo",
+         "emphasize"
+    ],
+    "pluginsConfig": {
+        "fontsettings": {
+            "family": "serif",
+            "size": 1
+        },
+        "sectionx": {
+            "tag": "b"
+        },
+        "tbfed-pagefooter": {
+             "copyright":"Copyright 2018 - 2019 Hongxin.",
+             "modify_label": "该文件修订时间：",
+             "modify_format": "YYYY-MM-DD HH:mm:ss"
+        },
+        "expandable-chapters-small":{},
+        "github-buttons": {
+            "buttons": [
+                {
+                    "user": "xiehongxin",
+                    "type": "follow",
+                    "size": "small",
+                    "width": "180",
+                    "count": true
+                }
+            ]
+        },
+        "simple-page-toc": {
+            "maxDepth": 3,
+            "skipFirstH1": true
+        },
+        "donate": {
+            "wechat": "http://darouwan.com/wp-content/uploads/2018/11/2018112800572824.png",
+            "alipay": "http://darouwan.com/wp-content/uploads/2018/11/2018112800573161.jpg",
+            "title": "谢谢各位老板赏一杯咖啡喝！",
+            "button": "赏",
+            "alipayText": "支付宝打赏",
+            "wechatText": "微信打赏"
+        },
+        "ad": {
+            "contentTop": "",
+            "contentBottom": ""
+        }
+    }
+}
